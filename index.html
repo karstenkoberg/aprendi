@@ -20,7 +20,7 @@
 
 body{background:var(--stage);color:var(--stage-ink);font-family:var(--ui)}
 *{box-sizing:border-box}
-button{font:inherit;cursor:pointer}
+button{font:inherit;cursor:pointer;color:inherit}
 button:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:start}
 @media (max-width:860px){.wrap{grid-template-columns:1fr;gap:24px}.stage-phone{order:-1}}
@@ -136,8 +136,10 @@ textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px
 .app-only .panel,.app-only .proto{display:none}
 .app-only .wrap{display:flex;justify-content:center;max-width:none}
 .hdr{position:relative}
-.hdr .swap{position:absolute;right:16px;bottom:14px;border:0;background:rgba(255,255,255,.14);color:inherit;border-radius:10px;padding:7px 10px;font-size:.72rem;font-weight:700;display:flex;align-items:center;gap:5px}
-.hdr:not(.dark) .swap{background:var(--card);border:1px solid var(--line)}
+.hdr .swap{position:absolute;right:16px;bottom:16px;border:0;background:var(--gold);color:#161616;border-radius:999px;padding:10px 16px;font-size:.86rem;font-weight:800;display:flex;align-items:center;gap:7px;box-shadow:0 6px 16px -6px rgba(232,184,96,.75)}
+.hdr .swap svg{width:17px;height:17px;stroke-width:2.3}
+.hdr .swap:active{transform:scale(.96)}
+.hdr:has(.swap) h2,.hdr:has(.swap) p{padding-right:128px}
 @media (max-width:600px){
  .app-only body{background:var(--ice)}
  .app-only .wrap{padding:0}
@@ -166,7 +168,7 @@ textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px
   <section class="panel" aria-label="Recorrido del pitch">
     <div class="brand">
       <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#529b8f"/><circle cx="50" cy="26" r="9.5" fill="#e8b860"/><path d="M14 42c13-2 24 0 34 6v26c-10-6-21-8-34-6z" fill="#fff"/><path d="M86 42c-13-2-24 0-34 6v26c10-6 21-8 34-6z" fill="#fff"/></svg>
-      <div><h1>Aprend<span>i</span></h1><p class="tagline">Tu colegio, tu familia, tu mentor</p></div>
+      <div><h1>Aprend<span>i</span></h1><p class="tagline">Tu colegio, tu familia, tu tutor</p></div>
     </div>
 
     <div>
@@ -250,7 +252,7 @@ function hdr(title,sub,back,dark){return `<div class="hdr ${dark?'dark':''}">${b
 
 /* ---------- FAMILIA ---------- */
 const V={};
-V.onb=()=>`<div class="hdr dark welcome"><div class="glow"></div><div class="wlogo">${LOGO.replace('width="40" height="40"','width="104" height="104"')}</div><div class="whi">Bienvenidos a</div><div class="wname">Aprend<span>i</span></div><div class="wtag">Tu colegio, tu familia, tu mentor</div></div>
+V.onb=()=>`<div class="hdr dark welcome"><div class="glow"></div><div class="wlogo">${LOGO.replace('width="40" height="40"','width="104" height="104"')}</div><div class="whi">Bienvenidos a</div><div class="wname">Aprend<span>i</span></div><div class="wtag">Tu colegio, tu familia, tu tutor</div></div>
 <div class="body wbody"><div><h2 class="wq">¿Quién eres?</h2><div class="sub">Cada estudiante aprende diferente. Elige cómo vas a usar la app.</div></div>
  ${[['familia','Soy familia','Busco apoyo cerca para mi hijo o hija',C.teal,'home'],['tutor','Soy tutor o especialista','Quiero ofrecer sesiones verificadas',C.or,'triad'],['colegio','Soy colegio','Quiero articular el plan con los tutores',C.blue,'users']].map(([r,t,d,c,i])=>`<button class="rolecard tap" data-setrole="${r}"><span class="ic" style="background:${c}1f">${svg(i,24,c)}</span><span><span class="t" style="display:block">${t}</span><span class="sub">${d}</span></span></button>`).join('')}
  <div class="card row" style="margin-top:auto">${svg('shield',22,C.teal)}<div class="sub"><b style="color:var(--ink)">Verificación en 3 capas</b> para cada tutor: antecedentes, validación académica y entrevista con referencias.</div></div>
@@ -268,7 +270,7 @@ V.home=()=>{const nxt=T();return `${hdr('Hola, Gloria','Mateo · 7 años · 2.º
   <div class="row" style="margin-top:8px"><div class="av" style="background:${TIERS[nxt.tier].c}">${nxt.ini}</div><div class="grow"><div class="t">${nxt.name}</div><div class="sub">${S.slot} · ${S.place}</div></div><span class="pill p-or">Presencial</span></div>
  </div>
  <div class="card tap" data-go="plan">
-  <div class="row"><div class="av" style="background:${C.blue};width:36px;height:36px;font-size:.75rem">AV</div><div class="grow"><div class="lbl">Nuevo en la bitácora</div><div class="sub" style="color:var(--ink)">${esc(S.log[S.log.length-1].txt).slice(0,90)}…</div></div></div>
+  <div class="row"><div class="av" style="background:${S.log[S.log.length-1].c};width:36px;height:36px;font-size:.75rem">${S.log[S.log.length-1].ini}</div><div class="grow"><div class="lbl">Nuevo en la bitácora</div><div class="sub" style="color:var(--ink)">${esc(S.log[S.log.length-1].txt).slice(0,90)}…</div></div></div>
  </div>
  <div class="lbl" style="margin-top:4px">¿Qué necesitas hoy?</div>
  <div class="grid2">
