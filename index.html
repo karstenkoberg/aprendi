@@ -188,7 +188,7 @@ textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px
     <div>
       <div class="tag">Economía por sesión (del modelo)</div>
       <div class="econ">
-        <div><div class="k">Refuerzo académico</div><div class="v">$20.00</div><div class="s">Take rate $3.50 (17.5%)</div></div>
+        <div><div class="k">Refuerzo académico</div><div class="v">$22.00</div><div class="s">Take rate $6.60 (30%)</div></div>
         <div><div class="k">Psicopedagogía clínica</div><div class="v">$35.00</div><div class="s">Take rate $10.00 (28.6%)</div></div>
       </div>
     </div>
@@ -215,8 +215,8 @@ const TUTORS=[
  {id:'lucia',ini:'LG',name:'Lic. Lucía Gómez',tier:'psico',role:'Psicopedagoga clínica certificada',spec:['TDAH','Grafomotricidad'],rating:4.8,rev:94,eta:13,km:2.0,price:35,x:92,y:208,yrs:7,bio:'Especialista en atención y funciones ejecutivas. Diseña rutinas de estudio para casa y colegio.'},
  {id:'andres',ini:'AM',name:'Prof. Andrés Mora',tier:'prof',role:'Docente de primaria',spec:['Matemáticas','Nivelación'],rating:4.8,rev:76,eta:11,km:1.6,price:20,x:262,y:214,yrs:12,bio:'Docente activo de primaria. Conoce la metodología de los colegios aliados y nivela por unidad.'},
  {id:'carla',ini:'CS',name:'Prof. Carla Soto',tier:'prof',role:'Docente de inglés',spec:['Inglés','Lectura'],rating:4.7,rev:51,eta:14,km:2.3,price:20,x:70,y:96,yrs:6,bio:'Refuerzo de inglés alineado al libro y evaluaciones del grado.'},
- {id:'valeria',ini:'VC',name:'Valeria Chaves',tier:'uni',role:'Estudiante de Psicología (4.º año)',spec:['Tareas','Proyectos'],rating:4.9,rev:63,eta:6,km:0.8,price:20,x:150,y:88,yrs:2,bio:'Acompañamiento en tareas diarias y proyectos escolares. Supervisada por la coordinación pedagógica.'},
- {id:'diego',ini:'DR',name:'Diego Rojas',tier:'uni',role:'Estudiante de Ingeniería',spec:['Matemáticas','Ciencias'],rating:4.6,rev:38,eta:10,km:1.4,price:20,x:196,y:236,yrs:1,bio:'Refuerzo en matemáticas y ciencias con material del Classroom del colegio.'}
+ {id:'valeria',ini:'VC',name:'Valeria Chaves',tier:'uni',role:'Estudiante de Psicología (4.º año)',spec:['Tareas','Proyectos'],rating:4.9,rev:63,eta:6,km:0.8,price:22,x:150,y:88,yrs:2,bio:'Acompañamiento en tareas diarias y proyectos escolares. Supervisada por la coordinación pedagógica.'},
+ {id:'diego',ini:'DR',name:'Diego Rojas',tier:'uni',role:'Estudiante de Ingeniería',spec:['Matemáticas','Ciencias'],rating:4.6,rev:38,eta:10,km:1.4,price:22,x:196,y:236,yrs:1,bio:'Refuerzo en matemáticas y ciencias con material del Classroom del colegio.'}
 ];
 const S={role:'familia',scr:'home',tier:'all',mode:'pres',tutor:'sofia',slot:'Jue 4:00 p. m.',place:'Domicilio',pack:4,trk:1,neuro:[true,true,false,false],tutorObj:[true,false,false],evi:false,trate:4,step:0,
  log:[
@@ -274,7 +274,7 @@ V.home=()=>{const nxt=T();return `${hdr('Hola, Gloria','Mateo · 7 años · 2.º
  </div>
  <div class="lbl" style="margin-top:4px">¿Qué necesitas hoy?</div>
  <div class="grid2">
-  <button class="card tap" style="text-align:left" data-go="search" data-tierset="uni"><span class="pill p-teal">Desde $20</span><div class="t" style="margin-top:8px">Ayuda con tareas</div><div class="sub">Universitarios verificados</div></button>
+  <button class="card tap" style="text-align:left" data-go="search" data-tierset="uni"><span class="pill p-teal">Desde $22</span><div class="t" style="margin-top:8px">Ayuda con tareas</div><div class="sub">Universitarios verificados</div></button>
   <button class="card tap" style="text-align:left" data-go="search" data-tierset="prof"><span class="pill p-blue">Nivelación</span><div class="t" style="margin-top:8px">Refuerzo por materia</div><div class="sub">Docentes activos</div></button>
   <button class="card tap" style="text-align:left" data-go="neuro"><span class="pill p-or">$35</span><div class="t" style="margin-top:8px">Neurodiversidad</div><div class="sub">Dislexia, TDAH</div></button>
   <button class="card tap" style="text-align:left" data-go="plan"><span class="pill p-navy">Tríada</span><div class="t" style="margin-top:8px">Hablar con la maestra</div><div class="sub">Bitácora compartida</div></button>
