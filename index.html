@@ -189,7 +189,7 @@ textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px
       <div class="tag">Economía por sesión (del modelo)</div>
       <div class="econ">
         <div><div class="k">Refuerzo académico</div><div class="v">$22.00</div><div class="s">Take rate $6.60 (30%)</div></div>
-        <div><div class="k">Psicopedagogía clínica</div><div class="v">$35.00</div><div class="s">Take rate $10.00 (28.6%)</div></div>
+        <div><div class="k">Psicopedagogía clínica</div><div class="v">$39.00</div><div class="s">Take rate $11.70 (30%)</div></div>
       </div>
     </div>
 
@@ -211,10 +211,10 @@ const C={navy:'#171a19',or:'#c9962e',teal:'#3e877b',blue:'#3d6aa8'};
 const LOGO=`<svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#529b8f"/><circle cx="50" cy="26" r="9.5" fill="#e8b860"/><path d="M14 42c13-2 24 0 34 6v26c-10-6-21-8-34-6z" fill="#fff"/><path d="M86 42c-13-2-24 0-34 6v26c10-6 21-8 34-6z" fill="#fff"/></svg>`;
 const TIERS={uni:{n:'Universitario',d:'Tareas y proyectos',c:C.teal,cls:'p-teal'},prof:{n:'Profesor',d:'Nivelación por materia',c:C.blue,cls:'p-blue'},psico:{n:'Psicopedagoga',d:'Dislexia, TDAH, grafomotricidad',c:C.or,cls:'p-or'}};
 const TUTORS=[
- {id:'sofia',ini:'SR',name:'Lic. Sofía Ramírez',tier:'psico',role:'Psicopedagoga clínica certificada',spec:['Dislexia','Lectoescritura'],rating:4.9,rev:128,eta:8,km:1.1,price:35,x:228,y:112,yrs:9,bio:'Acompaña a niños de primaria con dificultades de lectoescritura. Trabaja con la coach pedagógica de Aprendi en planes especializados.'},
- {id:'lucia',ini:'LG',name:'Lic. Lucía Gómez',tier:'psico',role:'Psicopedagoga clínica certificada',spec:['TDAH','Grafomotricidad'],rating:4.8,rev:94,eta:13,km:2.0,price:35,x:92,y:208,yrs:7,bio:'Especialista en atención y funciones ejecutivas. Diseña rutinas de estudio para casa y colegio.'},
- {id:'andres',ini:'AM',name:'Prof. Andrés Mora',tier:'prof',role:'Docente de primaria',spec:['Matemáticas','Nivelación'],rating:4.8,rev:76,eta:11,km:1.6,price:20,x:262,y:214,yrs:12,bio:'Docente activo de primaria. Conoce la metodología de los colegios aliados y nivela por unidad.'},
- {id:'carla',ini:'CS',name:'Prof. Carla Soto',tier:'prof',role:'Docente de inglés',spec:['Inglés','Lectura'],rating:4.7,rev:51,eta:14,km:2.3,price:20,x:70,y:96,yrs:6,bio:'Refuerzo de inglés alineado al libro y evaluaciones del grado.'},
+ {id:'sofia',ini:'SR',name:'Lic. Sofía Ramírez',tier:'psico',role:'Psicopedagoga clínica certificada',spec:['Dislexia','Lectoescritura'],rating:4.9,rev:128,eta:8,km:1.1,price:39,x:228,y:112,yrs:9,bio:'Acompaña a niños de primaria con dificultades de lectoescritura. Trabaja con la coach pedagógica de Aprendi en planes especializados.'},
+ {id:'lucia',ini:'LG',name:'Lic. Lucía Gómez',tier:'psico',role:'Psicopedagoga clínica certificada',spec:['TDAH','Grafomotricidad'],rating:4.8,rev:94,eta:13,km:2.0,price:39,x:92,y:208,yrs:7,bio:'Especialista en atención y funciones ejecutivas. Diseña rutinas de estudio para casa y colegio.'},
+ {id:'andres',ini:'AM',name:'Prof. Andrés Mora',tier:'prof',role:'Docente de primaria',spec:['Matemáticas','Nivelación'],rating:4.8,rev:76,eta:11,km:1.6,price:22,x:262,y:214,yrs:12,bio:'Docente activo de primaria. Conoce la metodología de los colegios aliados y nivela por unidad.'},
+ {id:'carla',ini:'CS',name:'Prof. Carla Soto',tier:'prof',role:'Docente de inglés',spec:['Inglés','Lectura'],rating:4.7,rev:51,eta:14,km:2.3,price:22,x:70,y:96,yrs:6,bio:'Refuerzo de inglés alineado al libro y evaluaciones del grado.'},
  {id:'valeria',ini:'VC',name:'Valeria Chaves',tier:'uni',role:'Estudiante de Psicología (4.º año)',spec:['Tareas','Proyectos'],rating:4.9,rev:63,eta:6,km:0.8,price:22,x:150,y:88,yrs:2,bio:'Acompañamiento en tareas diarias y proyectos escolares. Supervisada por la coordinación pedagógica.'},
  {id:'diego',ini:'DR',name:'Diego Rojas',tier:'uni',role:'Estudiante de Ingeniería',spec:['Matemáticas','Ciencias'],rating:4.6,rev:38,eta:10,km:1.4,price:22,x:196,y:236,yrs:1,bio:'Refuerzo en matemáticas y ciencias con material del Classroom del colegio.'}
 ];
@@ -276,7 +276,7 @@ V.home=()=>{const nxt=T();return `${hdr('Hola, Gloria','Mateo · 7 años · 2.º
  <div class="grid2">
   <button class="card tap" style="text-align:left" data-go="search" data-tierset="uni"><span class="pill p-teal">Desde $22</span><div class="t" style="margin-top:8px">Ayuda con tareas</div><div class="sub">Universitarios verificados</div></button>
   <button class="card tap" style="text-align:left" data-go="search" data-tierset="prof"><span class="pill p-blue">Nivelación</span><div class="t" style="margin-top:8px">Refuerzo por materia</div><div class="sub">Docentes activos</div></button>
-  <button class="card tap" style="text-align:left" data-go="neuro"><span class="pill p-or">$35</span><div class="t" style="margin-top:8px">Neurodiversidad</div><div class="sub">Dislexia, TDAH</div></button>
+  <button class="card tap" style="text-align:left" data-go="neuro"><span class="pill p-or">$39</span><div class="t" style="margin-top:8px">Neurodiversidad</div><div class="sub">Dislexia, TDAH</div></button>
   <button class="card tap" style="text-align:left" data-go="plan"><span class="pill p-navy">Tríada</span><div class="t" style="margin-top:8px">Hablar con la maestra</div><div class="sub">Bitácora compartida</div></button>
  </div>
 </div>${nav()}`};
@@ -381,7 +381,7 @@ V.neuro=()=>{const q=['Le cuesta leer en voz alta o evita leer','Confunde letras
  <div class="card">
   ${[['Paso 2','Evaluación psicopedagógica presencial','En casa o en la biblioteca del colegio'],['Paso 3','Plan especializado','Diseñado con la coach pedagógica de Aprendi y la maestra'],['Paso 4','Acompañamiento combinado','Psicopedagoga y tutor de materia trabajan sobre el mismo plan']].map(([a,b,c])=>`<div class="check"><span class="pill p-or">${a}</span><span><b>${b}</b><br><span class="sub">${c}</span></span></div>`).join('')}
  </div>
- <button class="btn or" data-act="neuro" ${n<1?'disabled':''}>Solicitar evaluación · $35.00</button>
+ <button class="btn or" data-act="neuro" ${n<1?'disabled':''}>Solicitar evaluación · $39.00</button>
 </div>${nav()}`};
 
 /* ---------- TUTOR ---------- */
@@ -389,7 +389,7 @@ V.tHome=()=>`${hdr('Hola, Sofía','Psicopedagoga clínica · Verificada',null,tr
 <div class="body" style="padding-top:14px">
  <div class="grid2">
   <div class="card kpi"><div class="lbl">Hoy</div><div class="v">3</div><div class="sub">sesiones presenciales</div></div>
-  <div class="card kpi"><div class="lbl">Por sesión</div><div class="v">$25</div><div class="sub">de $35 (comisión $10)</div></div>
+  <div class="card kpi"><div class="lbl">Por sesión</div><div class="v">$27.30</div><div class="sub">de $39 (comisión $11.70)</div></div>
  </div>
  <div class="lbl">Agenda de hoy</div>
  <div class="list">
@@ -415,8 +415,8 @@ V.tSession=()=>`${hdr('Sesión con Mateo','Jue 4:00 p. m. · Domicilio · 4 de 8
 
 V.tEarn=()=>`${hdr('Ingresos','Octubre 2026 · pagos semanales')}
 <div class="body">
- <div class="card kpi"><div class="lbl">Ganado este mes</div><div class="v">$450.00</div><div class="sub">18 sesiones × $25.00</div></div>
- <div class="card">${[['Tarifa de la familia','$35.00'],['Comisión Aprendi (28.6%)','−$10.00'],['Recibes por sesión','$25.00']].map(([a,b],i)=>`<div class="check"><span class="grow ${i===2?'t':''}">${a}</span><b>${b}</b></div>`).join('')}</div>
+ <div class="card kpi"><div class="lbl">Ganado este mes</div><div class="v">$491.40</div><div class="sub">18 sesiones × $27.30</div></div>
+ <div class="card">${[['Tarifa de la familia','$39.00'],['Comisión Aprendi (30%)','−$11.70'],['Recibes por sesión','$27.30']].map(([a,b],i)=>`<div class="check"><span class="grow ${i===2?'t':''}">${a}</span><b>${b}</b></div>`).join('')}</div>
  <div class="sub">La familia paga por adelantado. No persigues cobros ni pierdes sesiones por cancelaciones tardías.</div>
 </div>${nav()}`;
 
